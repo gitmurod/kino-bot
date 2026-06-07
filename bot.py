@@ -14,8 +14,9 @@ from database import Database
 # ════════════════════════════════════════════════
 #  SOZLAMALAR
 # ════════════════════════════════════════════════
-BOT_TOKEN   = "8921374384:AAFzdPDnrnj7c0gUTt9m9LomNNlxgMnj3F0"   # @BotFather
-OWNER_ID    = 1958417797               # Asosiy eganing Telegram ID si
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+OWNER_ID  = int(os.environ.get("OWNER_ID"))
 DB_PATH     = "movies.db"
 
 logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s", level=logging.INFO)
